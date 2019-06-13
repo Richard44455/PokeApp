@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Angular Module Call -->
+<html ng-app="Pokemon">
+  <head>
+    <!-- JQuery Framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <!-- Title of the WebSite -->
+    <title>Pokedex</title>
+    <!-- Pokeball Icon -->
+    <link rel="icon" href="https://vignette.wikia.nocookie.net/the-pokemon-sun-and-moon/images/4/4c/Pokeball.png/revision/latest?cb=20161123053945">
+    <!-- Style File Section -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Google Font Framework -->
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    <!-- ionicons -->
+    <link rel="stylesheet"  href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+  </head>
+  <body ng-controller="PokeListado">
+    <div class="container">
+
+
+      <!-- Header Bar -->
+      <header class="header">
+        <div class="container">
+          <h1 class="Title">NEW POKEDEX</h1>
+          <i class="icon ion-navicon-round" id="btn-menu" ></i>
+          <nav class="nav" id="nav">
+            <ul class="menu">
+              <li class="menu_ _item"><a class="menu__link select" href="">Inicio</a></li>
+              <li class="menu_ _item"><a class="menu__link" href="">Inicio</a></li>
+              <li class="menu_ _item"><a class="menu__link" href="">Inicio</a></li>
+              <li class="menu_ _item"><a class="menu__link" href="">Inicio</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <br><br><br><br><br><br><br><br>
+
+      <div class="container">
+        <div class="row">
+                <div class="pk">
+                    <img src="images/poke2.jpg" class="pk__img">
+                    <div class="container">
+                        <h2 class="pk__titulo">¡Únete al Club de Entrenadores Pokémon!</h2>
+                        <p class="pak__txt">¡Crea una cuenta del Club de Entrenadores Pokémon hoy mismo! </p>
+                    </div>
+                </div>   
+        </div>
+      </div>
+      
+
+
+
+
+      <!-- Pokemon Container Info -->
+      <br/>
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-md-3 text-center col-sm-4"  ng-repeat="x in Pok | orderBy : 'id'" ng-if="x.data != undefined "> -->
+          <input type="text" ng-model="idP">
+          <div class="col-md-3 text-center col-sm-4" ng-repeat="x in PokeData | filter: idP ">
+            <div class="divInfo">
+              <!-- Pokemon Picture -->
+              <!-- <img class="pokePicture" src="{{x.sprites.front_default}}" alt="Poke"> -->
+              <img class="pokePicture" src="{{x.data.sprites.front_default}}" alt="Poke">
+            </div>
+            <!-- <div class="pokeName">{{x.data.name}}</div> -->
+            <div class="pokeName"> {{x.data.name}} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- AngularJS v1 Framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Function's File -->
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>}
+  </body>
+</html>

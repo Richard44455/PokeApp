@@ -1,0 +1,136 @@
+html,  {
+  width: 100% !important;
+}
+body{
+  margin: 0;
+}
+.fullContainer, .fullWidth {
+  /* Full Size Container */
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* Header Bar Style */
+.header {
+  height: 80px;
+  
+  width: 100%;
+  /* Vertical and Horizontal Align */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+/* Pokedex Title Style */
+.Title {
+  font-family: 'Rammetto One', cursive;
+  color: #54585C;
+  letter-spacing: 1.5;
+  left: -100%;
+}
+/* Pokemon Container */
+.divInfo {
+  border: 3px solid black;
+  height: 250px;
+  background-color: #FDF5DE;
+  /* Picture Aling */
+  display:flex;
+  /* Vertical Align */
+  align-items: center;
+  /* Horizontal Align */
+  justify-content: center;
+  box-shadow: 3px 2px 5px #54585C;
+}
+/* Width Pokemon Picture */
+.pokePicture {
+  width: 200px;
+}
+.pokePicture:hover {
+  width: 250px;
+}
+/* Name of the Pokemon Style */
+.pokeName {
+  border: 3px solid black;
+  padding: 5px;
+  background-color: #3ACFC0;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-family: 'Coiny', cursive;
+  font-size: 25px;
+  box-shadow: 3px 2px 5px #54585C;
+}
+/*menu*/
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 38px;
+  background: #f7aa00;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.nav {
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.4s;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.logo, .icon{
+  margin: 5px;
+  color: #fff;
+}
+.menu__link{
+  display: block;
+  padding: 15px;
+  background: #f7aa00;
+  text-decoration: none;
+  color: #fff;  
+} 
+.menu__link:hover, .select {
+  background: white;
+  color: #f7aa00;
+}
+.mostrar {
+  left: 0;
+}
+
+
+/*--------------Estilos del pk*--------------*/
+
+.pk {
+  margin-top: -250px;
+  position: relative;
+  z-index: -1000;
+}
+.pk .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  color: ;
+  text-align: center;
+}
+.pk__txt {
+  display: none;
+}
+.pk__img{
+max-width: 100%;
+
+}
